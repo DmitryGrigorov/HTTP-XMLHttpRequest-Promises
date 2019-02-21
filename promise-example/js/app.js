@@ -32,3 +32,18 @@ function getJSON(url) {
   });
 };
 
+// Получаем JSON объекты с помощью промисов
+const p1 = getJSON("./js/example1.json");
+const p2 = getJSON("./js/exampe2.json");
+const p3 = getJSON("./js/example3.json");
+
+// перебираем массив промисов
+Promise.all([p1, p2, p3]).then(values => {
+  console.log(values[0]);
+  console.log(values[1]);
+  console.log(values[2]);
+  console.log("done")
+}, function(reason) {
+  console.log("reason", reason);
+});
+
