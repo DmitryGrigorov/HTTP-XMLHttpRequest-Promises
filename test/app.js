@@ -10,10 +10,10 @@ console.log('After declaration Promise'); // 2
 promise.then((value) => {
   setTimeout(function() {
     console.log('I am from then resolved', value)
-  }, 0) // 4
+  }, 0) // 5
 }); 
 
 setTimeout(function() {
-  console.log(" Fuck you from setTimeout ");
+  console.log(" Fuck you from setTimeout "); // 6
 }, 0)
 console.log('23'); // 3
